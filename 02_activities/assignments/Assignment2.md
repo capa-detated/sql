@@ -54,7 +54,8 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+To save customer addresses, we have two options: save only the most recent address on record, or save every address each customer has ever recorded.
+Type 1 slowly changing dimension architecture overwrites existing data when a field is updated, so this would be the appropraite strategy if we only need the current address and don't care about tracking address changes of customers. However, if we want the table to preserve every address that each customer has ever recorded, we would want to implement Type 2 architecture, as this type allows us to save all entries. Using Type 2, we would then want to add an additional 'flag' column (or timestamp) to indicate which entry is currently 'active'. 
 ```
 
 ***
@@ -180,7 +181,14 @@ Read: Boykis, V. (2019, October 16). _Neural nets are just people all the way do
 
 Consider, for example, concepts of labour, bias, LLM proliferation, moderating content, intersection of technology and society, ect. 
 
-
 ```
-Your thoughts...
+
+Vicki Boykis' piece “Neural Nets Are Just People” lifts the curtain on the unseen workforce that underpins modern AI systems. Although these technologies promise innovative solutions and algorithmic efficiency, their success relies on large pools of human labourers who annotate and moderate content. Many of these workers live in regions with weaker regulations and limited healthcare access, shouldering not only the intense psychological burden of filtering potentially traumatic materials but also the financial strain that comes with inadequate social protections. Such difficult conditions, amplified by global socio-economic disparities, deepen the invisibility of the people who make AI possible.
+
+This disparity is nothing new. As Boykis noted, Dr. Fei-Fei Li’s groundbreaking work on ImageNet, for instance, involved crowdsourced labor for image classification because American university students failed to live up to the task. Thousands of low-paid annotators, many working remotely from developing countries, laboured to feed meticulously labeled data into the nascent field of computer vision. Although the resulting database propelled AI research forward, the individuals who labeled each image remained unacknowledged and underpaid, setting a precedent that persists across today’s AI enterprises. On top of this, the article points to the biases that creeps into AI systems when the human workers labeling data are not offered adequate training or fair working conditions. Precarious employment structures may force annotators to rush through tasks, lean on stereotypes, or rely on simplistic assumptions. These rushed decisions then become encoded in the models that drive everyday applications, perpetuating harmful cultural and societal biases. These systemic issues question the promise of AI as a great equalizer, suggesting instead that it will exacerbate harmful power structures if the status quo persists.
+
+Alongside these labor concerns, the rapid expansion of AI applications raises further ethical questions. Large Language Models now permeate everyday life in the form of chatbots and content generators. Yet LLMs are only one dimension of a broad array of AI use cases. Law enforcement agencies increasingly rely on image recognition software to identify suspects, a practice that is known to lead to false arrests based on biased underlying models. Meanwhile, the automation of jobs, ranging from warehouse fulfillment to customer service, threatens to displace workers without providing clear pathways for financial resilience. Even in areas where technology claims to foster connection, such as personalized social media feeds, the result can be greater isolation; by filtering our interactions to echo existing preferences, AI-driven recommendation engines herd us into digital silos, diminishing the sense of shared community and healthy civic discourse.
+
+All of these developments underscore the need for holistic ethical standards that address labor rights, privacy, bias, and transparency. It seems that we cannot neatly disentangle the pressing concerns around the treatment of hidden AI workers from the broader social ramifications of expanding AI capabilities. Governments, private companies, research institutions, and consumers all bear responsibility, though not equally, for ensuring that AI’s benefits are not purchased at the expense of human well-being. Ultimately, the call to see “neural nets as people” isn’t just a metaphor for how these systems function; it’s a call to recognize the very real human labor and social implications woven into the foundation of modern AI technology.
+
 ```
